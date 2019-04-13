@@ -30,11 +30,10 @@
           %li.header-list_left
             %i.magic.icon
           %li.header-list_left famifun
-          .ui.dropdown.item
-            = link_to new_users_path do
-              %li.header-list "Register"
-            = link_to :login do
-              %li.header-list "Login"
+          = link_to new_users_path do
+            %li.header-list Register
+          = link_to :login do
+            %li.header-list Login
     %div
       %p#notice= flash[:notice]
       %p#alert= flash[:alert]

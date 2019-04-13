@@ -1,4 +1,7 @@
 .user-session{
+  background-image: url('money.png') !important;
+  background-size: cover;
+  height: 100%;
   .ui.center.aligned.container{
     color: white;
     padding-top: 20%;
@@ -23,9 +26,5 @@
         padding: 20px;
       }
     }
-  }
-  body{
-    background-image: url('money.png') !important;
-    background-size: cover;
   }
 }
