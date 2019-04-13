@@ -1,0 +1,22 @@
+.card-new
+  = form_tag('/users/card', method: :post, class: 'card-new-form') do
+    .card-new-form__box.ui.center.aligned.container
+      .errors
+      %span.title
+        支払い用クレジットカード登録
+      .form-group.ui.center.aligned.container
+        %label{:for => "inputCardNumber"} カード番号
+        %input#card_number.form-control{placeholder: "カード番号", type: "text"}/
+      .form-group
+        %label{for: "inputCVV"} CVV/セキュリティコード
+        %input#cvv.form-control{placeholder: "CVV", type: "text"}/
+      .form-group
+        %label{for: "inputExp"} 有効期限
+        .row
+          .col-md-6
+            %input#exp_year.form-control{placeholder: "年",type: "text"}/
+          .col-md-6
+            %input#exp_month.form-control{placeholder: "月",type: "text"}/
+      %submit#token.ui.yellow.labeled.icon.button
+        %i.credit.card.outline.icon
+        カード登録

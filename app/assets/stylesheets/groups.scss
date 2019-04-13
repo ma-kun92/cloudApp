@@ -1,0 +1,22 @@
+
+
+.back-image{
+  height           : auto;
+  width            : 100vw;
+  background-image : image-url('book.jpg');
+  background-size  : cover;
+  .reset-opacity{
+    height           : 100%;
+    .main.ui.center.aligned.container{
+      background-color : #FFFFFFCC;
+      padding-top      : 120px;
+      padding-bottom   : 50px;
+      box-sizing       : border-box;
+      height           : 100%;
+      p{
+        padding: 5px 0;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,45 @@
+
+.project
+  .project-show.ui.center.aligned.container
+    %p#notice= notice
+    .project-show-main
+      %p.title
+        Project Title
+        %br/
+        %span
+          = @project.title
+      - if @project.video_url.match(/.mp4$/)
+        = video_tag(@project.video.url, :controls =>true, :loop => true, width: "50%", height: "50%" )
+      - else
+        = image_tag(@project.video.url, width: "50%", height: "50%" )
+        / carriewaveのメソッドを利用している(.url)
+      %h2.content= @project.content
+      -if current_user.payjp_id
+        = link_to new_group_project_payment_path(params[:group_id], params[:id]) do
+          .ui.teal.labeled.icon.button
+            %i.smile.outline.icon
+            この人を支援する！
+      -else
+        = link_to new_users_card_path do
+          .ui.teal.labeled.icon.button
+            %i.smile.outline.icon
+            この人を支援する！
+      = form_for @message,url: group_project_messages_path(@project.group_id, @project.id) do |f|
+        = f.text_field  :content, placeholder: "自由にコメントして!"
+        %submit.ui.brown.labeled.icon.button
+          %i.paper.plane.outline.icon
+          伝える
+
+      .project-messages
+        %h2 みんなのコメント
+        - @project.messages.each do |project|
+          %p.project-content
+            = project.content
+          %span.date
+            = project.created_at
+
+      .select-option
+        = link_to 'Edit', edit_group_project_path(params[:group_id],@project)
+        %span
+          \/
+        = link_to 'Back', group_path(params[:group_id], @project)

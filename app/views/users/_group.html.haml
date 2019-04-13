@@ -1,0 +1,23 @@
+- groups.each do |group|
+  %li.group__lists-list
+    = link_to  "グループ名：#{group.name}",group_path(group)
+  .ui.divided.very.relaxed.animated.list
+    - group.projects.each do |project|
+      .project
+        .ui.equal.width.center.aligned.padded.grid
+          .ui.center.aligned
+            .ui.card
+              .title
+                =link_to project.title, group_project_path(project.group.id, project.id)
+              .image
+                %img{:src => "https://semantic-ui.com/images/avatar2/large/kristy.png"}/
+              .content
+                %a.header project.user.name
+                .meta
+                  %span.date project.created_at
+                .description
+                  Kristy is an art director living in New York.
+              .extra.content
+                %a
+                  %i.user.icon
+                  22 Friends

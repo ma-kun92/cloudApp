@@ -1,0 +1,23 @@
+= form_for @group,{model: group, local: true} do |form|
+  - if group.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(group.errors.count, "error")
+        prohibited this group from being saved:
+      %ul
+        - group.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :name, 'グループ名'
+    = form.text_field :name
+    = form.label :key, '入場キー'
+    %span
+      設定する
+    = radio_button_tag :check, "はい"
+    %span
+      しない
+    = radio_button_tag :check, "いいえ",checked: true
+    %br
+    = form.text_field :key, placeholder: '必要な人だけ入力してください',id: "room_key"
+  .actions
+    = form.submit

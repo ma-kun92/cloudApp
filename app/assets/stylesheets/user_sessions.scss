@@ -1,0 +1,31 @@
+.user-session{
+  .ui.center.aligned.container{
+    color: white;
+    padding-top: 20%;
+    width:100%;
+    form{
+      font-size: 24px;
+      height: 400px;
+      width: 100vw;
+      .field{
+        padding:20px;
+        line-height: 30px;
+        .text{
+          font-size: 16px;
+          padding: 5px;
+        }
+      }
+      #remember{
+        font-size: 20px;
+        color: white;
+      }
+      .action{
+        padding: 20px;
+      }
+    }
+  }
+  body{
+    background-image: url('money.png') !important;
+    background-size: cover;
+  }
+}

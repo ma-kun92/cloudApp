@@ -1,0 +1,47 @@
+#nav{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 80px;
+  background-image: image-url('nature.jpg') ;
+  background-size: cover;
+
+  ul{
+    margin: 0;
+    padding-left: 10%;
+    .header-list{
+      list-style: none;
+      padding: 0 10px;
+      background-color: #FFFFFF65;
+      font-size: 20px;
+      width: 120px;
+      height: 80px;
+      line-height: 70px;
+      vertical-align: middle;
+      text-align: center;
+      float: right;
+      &:hover{
+        background-color: #EBEAA932;
+      }
+      &:after{
+        content:"";
+        clear: both;
+        display: block;
+      }
+      a{
+        color: grey;
+      }
+    }
+    .header-list_left{
+      list-style: none;
+      color:#F4500AFF;
+      font-size: 60px;
+      width: 100px;
+      height: 70px;
+      line-height: 80px;
+      vertical-align: middle;
+      text-align: center;
+      float: left;
+    }
+  }
+}

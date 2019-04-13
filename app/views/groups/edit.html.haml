@@ -1,0 +1,6 @@
+.pay-main.ui.center.aligned.container
+  %h1 Editing Group
+  = render 'form', group: @group
+  = link_to 'Show', @group
+  |
+  \#{link_to 'Back', groups_path}

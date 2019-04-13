@@ -1,0 +1,10 @@
+.payment-new
+  .payment-new__form
+    .pay-form
+      .pay-form__project-name
+        =@item.title
+      .pay-form__user-name
+        =current_user.name
+      =form_for @payment,url: group_item_payments_path do |f|
+        =f.text_field :amount, placeholder: "50~ 記入してください"
+        =submit_tag '入金する'

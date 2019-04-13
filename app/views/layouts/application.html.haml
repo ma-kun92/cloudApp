@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MyApp01
+    = csrf_meta_tags
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0", :name => "viewport"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"}
+    %script{:src => "https://js.pay.jp/", :type => "text/javascript"}
+
+  %body
+    #nav
+      - if current_user
+        %ul
+          %li.header-list_left
+            %i.magic.icon
+          %li.header-list_left famifun
+          = link_to edit_users_path do
+            %li.header-list Edit Me
+          = link_to :logout, method: :delete do
+            %li.header-list Logout
+      - else
+        %ul
+          %li.header-list_left
+            %i.magic.icon
+          %li.header-list_left famifun
+          .ui.dropdown.item
+            = link_to new_users_path do
+              %li.header-list "Register"
+            = link_to :login do
+              %li.header-list "Login"
+    %div
+      %p#notice= flash[:notice]
+      %p#alert= flash[:alert]
+    = yield

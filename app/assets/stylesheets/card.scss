@@ -1,0 +1,71 @@
+.card-new{
+  height: 100%;
+  width: 100%;
+  background: image-url("card.jpg");
+  background-size: cover;
+  &-form{
+    padding-top: 170px;
+    &__box{
+      .title{
+        background-color: #FDCC6599;
+        padding: 10px;
+        line-height: 30px;
+        font-size: 24px;
+        font-weight: 600;
+        border: 3px solid #FDCC6599;
+        border-radius: 10px;
+      }
+      label{
+        font-weight: 600;
+        margin-top: 35px;
+      }
+      #card_number{
+        border-color: #FDCC6599;
+        border-radius: 10px;
+        height: 40px;
+        line-height: 24px;
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      #cvv{
+        border-color: #FDCC6599;
+        border-radius: 10px;
+        height: 40px;
+        line-height: 24px;
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      #exp_year{
+        border-color: #FDCC6599;
+        border-radius: 10px;
+        height: 40px;
+        line-height: 24px;
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      #exp_month{
+        border-color: #FDCC6599;
+        border-radius: 10px;
+        height: 40px;
+        line-height: 24px;
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      #token{
+        border-radius: 10px;
+        height: 40px;
+        line-height: 24px;
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 20px;
+        width: 200px;
+        color: brown;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+.back-image
+  .reset-opacity
+    .main.ui.center.aligned.container
+      %p#notice= notice
+      %p
+        %strong GroupName:
+        = @group.name
+        = link_to 'グループ編集', edit_group_path(@group)
+      %h4 新規プロジェクトの作成
+      = link_to '登録フォームへ記入する', new_group_project_path(@group)
+      %h3 プロジェクト一覧
+      - @projects.each do |project|
+        %div
+          %p.project-title
+            = link_to project.title, group_project_path(@group, project.id)
+          = project.created_at
+          %p 紹介動画
+          %p
+            - if project.video_url.match(/.mp4$/)
+              = video_tag(project.video.url, :controls =>true, :loop => true, width: "70%", height: "70%" )
+            - else
+              = image_tag(project.video.url, width: "70%", height: "70%" )
+              / carriewaveのメソッドを利用している(_url,.url)
+          / %p = project.content
+          / = form_for project.messages do |f|
+          /   = f.text_field  :content, placeholder: "自由にコメントしてみよう"
+          / = field_for :messages do |m|
+          /   = m.text_field :content
+      = link_to 'Back', users_path(current_user)
