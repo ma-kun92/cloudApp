@@ -1,0 +1,36 @@
+= form_for @project, url: group_projects_path(params[:group_id]) do |form|
+  - if @project.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(project.errors.count, "error")
+        prohibited this project from being saved:
+      %ul
+        - project.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :title, "タイトル"
+    .ui.big.icon.input
+      = form.text_field :title
+      %i.home.icon
+  .field
+
+    = form.label :video, "投稿したい画像・動画"
+    #img_field{:onclick => "$('#file').click()"}
+      - if project.video.url.present?
+        変更可能
+        = image_tag(project.video_url)
+      - else
+        ここをクリックしてファイルを選択ください
+    = form.file_field :video, class: "image", style: "display:none;", id: "file",:accept => 'image/*, video/*'
+
+  .field
+    = form.label :content, "アピール文"
+    .ui.big.icon.input
+      = form.text_area :content, size: "40x10"
+      %i.bullhorn.icon
+  %button.ui.compact.labeled.icon.button.olive
+    %i.exchange.icon
+    -if @project.title
+      変更する
+    -else
+      作成する
