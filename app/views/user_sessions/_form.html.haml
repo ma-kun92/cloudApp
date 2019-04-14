@@ -1,12 +1,17 @@
+
 = form_for @user ,url:user_sessions_path do |form|
   .field
     = form.label :email, 'Emailアドレス'
     %br/
-    = form.text_field :email, class: 'text'
+    .ui.big.icon.input
+      = form.text_field :email
+      %i.envelope.outline.icon
   .field
     = form.label :password,'パスワード'
     %br/
-    = form.password_field :password, class: 'text'
+    .ui.big.icon.input
+      = form.password_field :password
+      %i.key.icon
   = form.check_box :remember,{:checked => true,:size => '20px'}, true, false
   / check_box_tagの場合、第二引数はparams[:remember] = チェックされたものの値の関係、第三引数にはチェックされた時の値、第四引数にはチェックされなかった時の値
   / 個々の場合は第一引数にプロパティ名（DBのカラム名）,第二引数にオプション（これは省略することができない、何もない場合は{}）、第三引数は以降は上記のcheck_box_tagと一緒

@@ -1,5 +1,5 @@
 %p#notice= notice
-%h1 Items
+%h1 Projects
 %table
   %thead
     %tr
@@ -7,12 +7,12 @@
       %th Video
       %th{:colspan => "3"}
   %tbody
-    - @items.each do |item|
+    - @projects.each do |project|
       %tr
-        %td= item.title
-        %td= item.video
-        %td= link_to 'Show', group_item_path(params[:group_id],item)
-        %td= link_to 'Edit', edit_group_item_path(params[:group_id],item)
-        %td= link_to 'Destroy', group_item_path(params[:group_id],item), method: :delete, data: { confirm: 'Are you sure?' }
+        %td= project.title
+        %td= project.video
+        %td= link_to 'Show', group_project_path(params[:group_id],project)
+        %td= link_to 'Edit', edit_group_project_path(params[:group_id],project)
+        %td= link_to 'Destroy', group_project_path(params[:group_id],project), method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to 'New Item', new_group_item_path(params[:group_id])
+= link_to 'New Item', new_group_project_path(params[:group_id])

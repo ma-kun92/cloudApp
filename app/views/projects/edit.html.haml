@@ -1,3 +1,6 @@
-%h1 Editing Item
-= render 'form', item: @item
-= link_to 'Back', group_project_path(params[:group_id], params[:id])
+.project-edit
+  .ui.center.aligned.text.container
+    .project-edit-main
+      .project-edit-main__title
+        %span プロジェクトの編集
+      = render 'form', project: @project

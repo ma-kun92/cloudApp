@@ -1,40 +1,64 @@
 
-h1,h2,h3,li{
-  margin: 0;
-  padding: 0;
-}
-body{
+.user-index{
+  width: 100%;
   background-image: url('user_index.jpg');
   background-size: cover;
-
-}
-
-.main{
-  background-color: #F9FAF4E4;
-  padding-top: 30px;
-  margin-top: 80px;
-  height: 100vh;
-  h1,h3,ul,li{
-    padding: 10px;
+  .ui.center.aligned.container{
+    height: 100%;
+    background-color: #F9FAF4E4;
+    padding: 140px 0 50px;
   }
-  .group__lists{
-
-    &-list{
-      color: black;
-      list-style: none;
-      line-height: 40px;
-      font-size: 40px;
-      padding-bottom: 70px;
-      &-sub{
-        line-height: 30px;
-        font-size: 30px;
+  &__main{
+    .user-name{
+      span{
+        background: linear-gradient(transparent 70%, #ff99ab 70%);
+        font-size: 34px;
       }
     }
-    .item{
-      border-top:1px solid rgba(34,36,38,.5)!important
+    .make-group__form{
+      margin-top: 30px;
+      font-size: 20px;
+      a{
+
+      }
     }
-    .item:first-child{
-      border: none !important;
+    .ui.divided.very.relaxed.animated.list{
+      width: 70%;
+      margin: 0 auto;
+      .projects{
+        .ui.card{
+          .title{
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            vertical-align: middle;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .group__lists{
+      &-list{
+        color: black;
+        list-style: none;
+        line-height: 40px;
+        font-size: 30px;
+        padding-bottom: 20px;
+        a{
+          padding: 5px;
+          border-radius: 10px;
+          border: solid 1px orange;
+          background: #FC8008CC;
+          &:hover{
+            background: #FC8008FF;
+            color: black;
+          }
+        }
+        &-sub{
+          line-height: 30px;
+          font-size: 30px;
+        }
+      }
     }
   }
 }

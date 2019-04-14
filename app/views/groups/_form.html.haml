@@ -1,3 +1,4 @@
+
 = form_for @group,{model: group, local: true} do |form|
   - if group.errors.any?
     #error_explanation
@@ -9,15 +10,21 @@
           %li= message
   .field
     = form.label :name, 'グループ名'
-    = form.text_field :name
-    = form.label :key, '入場キー'
-    %span
-      設定する
-    = radio_button_tag :check, "はい"
-    %span
-      しない
-    = radio_button_tag :check, "いいえ",checked: true
+    .ui.big.icon.input
+      = form.text_field :name
+      %i.home.icon
+    .limited
+      = form.label :key, '入場キー'
+      %span
+        設定する
+      = radio_button_tag :check, "はい"
+      %span
+        しない
+      = radio_button_tag :check, "いいえ",checked: true
     %br
-    = form.text_field :key, placeholder: '必要な人だけ入力してください',id: "room_key"
-  .actions
-    = form.submit
+    .ui.big.icon.input
+      = form.text_field :key, placeholder: '必要な人だけ入力してください',id: "room_key"
+      %i.key.icon
+  / %button.ui.compact.labeled.icon.button.olive
+  /   %i.exchange.icon
+  /   変更する

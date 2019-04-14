@@ -1,16 +1,20 @@
 
 .user-session{
-  background-image: image-url('money.png') !important;
+  background-image: image-url('money.png');
   background-size: cover;
   height: 100%;
   .ui.center.aligned.container{
     color: white;
-    padding-top: 20%;
+    padding-top: 150px;
     width:100%;
+    h1{
+      font-size: 30px;
+    }
     form{
-      font-size: 24px;
-      height: 400px;
-      width: 100vw;
+      label{
+        font-size: 24px;
+        font-weight: 600;
+      }
       .field{
         padding:20px;
         line-height: 30px;
@@ -18,6 +22,12 @@
           font-size: 16px;
           padding: 5px;
         }
+      }
+      #user_email{
+        width: 300px;
+      }
+      #user_password{
+        width: 300px;
       }
       #remember{
         font-size: 20px;

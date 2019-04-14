@@ -4,6 +4,10 @@
   width: 100%;
   background: image-url("card.jpg");
   background-size: cover;
+  .ui.center.aligned.container{
+    height: 100%;
+    background-color: #FEFEFE80;
+  }
   &-form{
     padding-top: 170px;
     &__box{

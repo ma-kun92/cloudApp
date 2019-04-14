@@ -1,0 +1,40 @@
+.registration{
+  height: 100%;
+  background-image: image-url('money.png');
+  background-size: cover;
+  h1{
+    font-size: 34px;
+    color: white;
+    padding-top: 150px;
+  }
+  form{
+    button{
+      width: 200px;
+      color: darkgreen !important;
+    }
+    .actions{
+      margin-top: 30px;
+      color: gray;
+    }
+    .field{
+      label{
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+        margin-top: 30px;
+      }
+      input[type="text"]{
+        height: 47px;
+        width: 300px;
+        padding: 5px;
+        margin-top: 5px;
+      }
+      input[type="password"]{
+        height: 47px;
+        width: 300px;
+        padding: 5px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

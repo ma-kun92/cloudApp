@@ -1,18 +1,16 @@
 
-p{
-  margin: 0;
-}
 .project{
-  min-height: 700px;
   width : 100%;
-  background-image : image-url('red.jpg');
+  background-image: image-url('project.jpg');
+  background-size: cover;
   box-sizing: border-box;
-  &-show{
+  .ui.center.aligned.container{
+    padding-top: 140px;
     background-color: #FEFEFE99;
-    margin: 0 10%;
+    height: 100%;
+  }
+  &-show{
     &-main{
-      padding-top: 110px !important;
-      min-height: 700px;
       width: 100%;
       #new_message{
         width: 100%;
@@ -23,6 +21,15 @@ p{
         font-weight: 600;
         font-size: 48px;
         margin-bottom: 10px;
+        span{
+          background: linear-gradient(transparent 70%, #ff99ab 70%);
+          font-size: 34px;
+        }
+      }
+      .name{
+        margin: 20px 0 20px;
+        font-size: 26px;
+        font-weight: 600;
       }
       .content{
         width: 100%;
@@ -31,6 +38,7 @@ p{
         border-radius: 20px;
         background-color: #999998CF;
         margin: 30px 40px 30px;
+        padding: 5px;
       }
       .project-content{
         font-size: 18px;
@@ -55,6 +63,11 @@ p{
       }
       p{
         margin: 5px 0 0;
+      }
+      .comments{
+        font-weight: 600;
+        padding: 5px;
+        font-size: 26px;
       }
     }
   }

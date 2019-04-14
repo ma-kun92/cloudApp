@@ -32,7 +32,15 @@ class MessagesController < ApplicationController
     else
       render gruop_edit_path(@gruop), notice: '不備があります、やり直してください'
     end
+  end
 
+  def destroy
+    @message = Message.find_by(params[:id])
+    if @message.destroy
+      redirect_to group_project_path(@message.group_id,@message.project_id), notice: 'メッセージを削除しました'
+    else
+      render :back, notice: '削除できませんでした'
+    end
   end
 
   private

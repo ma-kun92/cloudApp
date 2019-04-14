@@ -1,21 +1,48 @@
 
 .back-image{
-  height           : auto;
-  width            : 100vw;
-  background-image : image-url('book.jpg');
-  background-size  : cover;
+  width            : 100%;
+  background-image: image-url('group.jpg');
+  background-size: cover;
   .reset-opacity{
-    height           : 100%;
-    .main.ui.center.aligned.container{
+    .main{
       background-color : #FFFFFFCC;
       padding-top      : 120px;
       padding-bottom   : 50px;
-      box-sizing       : border-box;
-      height           : 100%;
-      p{
-        padding: 5px 0;
+      .group{
+        margin-bottom: 20px;
+        &__title{
+          background: linear-gradient(transparent 70%, #ff99ab 70%);
+          font-size: 34px;
+        }
+      }
+      h3{
+        margin-top: 50px;
+        font-size: 26px;
+      }
+      h4{
+        font-size: 24px;
+      }
+      a{
+        display: contents;
+        font-size: 18px;
+      }
+      .project-list{
+        &__title{
+          font-size: 26px;
+        text-decoration: underline dotted;
+        margin: 0 0 10px;
+        }
+        .positive{
+          a{
+            color: #FFAF00FF;
+          }
+
+        }
       }
     }
   }
+}
+.ui.compact.labeled.icon.buttons{
+  z-index: 0 !important;
 }
 

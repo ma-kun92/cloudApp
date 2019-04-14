@@ -1,0 +1,46 @@
+.project-edit{
+  background-image: image-url('project.jpg');
+  background-size: cover;
+  height: 100%;
+  .ui.center.aligned.text.container{
+    height: 100%;
+    background-color: #FEFEFE99;
+  }
+  &-main{
+    padding: 140px;
+    button.ui.compact.labeled.icon.button.olive{
+      margin-top: 20px;
+    }
+    #project_video{
+      border-radius: 5px;
+    }
+    &__title{
+      margin-bottom: 20px;
+      span{
+        background: linear-gradient(transparent 70%, #ff99ab 70%);
+        font-size: 34px;
+      }
+    }
+  }
+}
+#img_field {
+  width: 300px;
+  height: 220px;
+  margin: 10px auto;
+  padding: 5px 8px;
+  border: solid 1px #EDBC6C;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  box-sizing: border-box;
+  &:hover{
+    background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+  }
+}

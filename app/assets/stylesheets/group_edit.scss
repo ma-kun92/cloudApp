@@ -1,0 +1,44 @@
+.group-edit{
+  height: 100%;
+  background-image: image-url('group.jpg');
+  background-size: cover;
+  .ui.center.aligned.container{
+    height: 100%;
+    background-color : #FFFFFFCC;
+  }
+  &__form{
+    padding-top: 140px;
+    span.title{
+      background: linear-gradient(transparent 70%, #ff99ab 70%);
+      font-size: 32px;
+      }
+    .field{
+      margin: 40px 0 30px;
+      label{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 26px;
+        margin-bottom: 10px;
+      }
+      #group_name{
+        width: 300px;
+        border-radius: 10px;
+        height: 47px;
+      }
+      .limited{
+        margin-top: 30px;
+        padding: 5px;
+        font-size: 20px;
+      }
+      #room_key{
+        width: 300px;
+        border-radius: 10px;
+        height: 47px;
+      }
+    }
+    button{
+      width: 200px;
+      height: 40px;
+    }
+  }
+}

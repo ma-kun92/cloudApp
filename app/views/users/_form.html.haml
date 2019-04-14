@@ -8,16 +8,29 @@
         - user.errors.full_messages.each do |message|
           %li= message
   .field
-    = form.label :name
-    = form.text_field :name
+    = form.label :name, '名前'
+    .ui.big.icon.input
+      = form.text_field :name
+      %i.user.icon
   .field
-    = form.label :email
-    = form.text_field :email
+    = form.label :email, 'メールアドレス'
+    .ui.big.icon.input
+      = form.text_field :email
+      %i.envelope.outline.icon
   .field
-    = form.label :password
-    = form.password_field :password
+    = form.label :password, 'パスワード'
+    .ui.big.icon.input
+      = form.password_field :password
+      %i.key.icon
   .field
-    = form.label :password_confirmation
-    = form.password_field :password_confirmation
+    = form.label :password_confirmation, '確認用パスワード'
+    .ui.big.icon.input
+      = form.password_field :password_confirmation
+      %i.key.icon
   .actions
-    = form.submit
+    = form.button "新規登録", class: 'ui labeled icon button olive' do
+      %i.user.icon
+      -if current_user
+        変更
+      -else
+        新規登録

@@ -1,3 +1,15 @@
-%h1 New Group
-= render 'form', {group: @group}
-= link_to 'Back', groups_path
+.group-edit
+  .ui.center.aligned.container
+    .group-edit__form
+      %span.title
+        %i.slideshare.icon
+        グループを作成する
+        %i.slideshare.icon
+      = render 'form', group: @group
+      %br/
+      %button.ui.compact.labeled.icon.button.olive
+        %i.exchange.icon
+        作成する
+      / = link_to '一覧画面に戻る', @group
+      / |
+      / \#{link_to 'Back', groups_path}
