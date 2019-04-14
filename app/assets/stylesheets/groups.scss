@@ -1,13 +1,17 @@
 
 .back-image{
-  width            : 100%;
+  width: 100%;
   background-image: image-url('group.jpg');
   background-size: cover;
+  .ui.center.aligned.container{
+    background-color : #FFFFFFCC;
+    padding-top      : 120px;
+    padding-bottom   : 50px;
+    height: 100%;
+  }
   .reset-opacity{
     .main{
-      background-color : #FFFFFFCC;
-      padding-top      : 120px;
-      padding-bottom   : 50px;
+
       .group{
         margin-bottom: 20px;
         &__title{
