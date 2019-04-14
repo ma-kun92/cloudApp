@@ -1,4 +1,4 @@
-= form_for @project, url: group_project_path(@project.group_id, @project) do |form|
+= form_for @project, url: group_project_path(params[:group_id], params[:id]) do |form|
   - if @project.errors.any?
     #error_explanation
       %h2
