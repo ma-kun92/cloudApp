@@ -16,7 +16,12 @@
         - else
           = image_tag(@project.video.url, width: "50%", height: "50%" )
           / carriewaveのメソッドを利用している(.url)
-        %h2.content= @project.content
+        .ui.message
+          .header
+            %i.smile.outline.icon
+            アピール文
+          %p
+            = @project.content
         -if current_user.payjp_id
           = link_to new_group_project_payment_path(params[:group_id], params[:id]) do
             .ui.teal.labeled.icon.button
@@ -30,14 +35,14 @@
         = form_for @message,url: group_project_messages_path(@project.group_id, @project.id) do |f|
           = f.text_field  :content, placeholder: "自由にコメントして!"
           %button.ui.brown.labeled.icon.button
-            %i.paint.brush.icon
+            %i.comment.icon
             伝える
 
         .project-messages
           .comments
             %span
               みんなのコメント
-              %i.clipboard.outline.icon
+              %i.comments.icon
 
           - @project.messages.each do |message|
             %p.project-content

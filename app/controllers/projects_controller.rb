@@ -32,9 +32,10 @@ def index
   end
 
   def update
+    @project = Project.find_by(params[:id])
     respond_to do |format|
       if @project.update(project_params) && @project.video.recreate_versions!
-        format.html { redirect_to @project, notice: 'project was successfully updated.' }
+        format.html { redirect_to group_project_url(@project.group_id, @project.id), notice: 'project was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -75,6 +76,6 @@ def index
   end
 
   def project_params
-    params.require(:project).permit(:title, :video).merge(user_id: current_user.id, group_id: params[:group_id])
+    params.require(:project).permit(:title, :video,:content).merge(user_id: current_user.id, group_id: params[:group_id])
   end
 end

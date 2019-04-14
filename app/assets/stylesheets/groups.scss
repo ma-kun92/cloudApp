@@ -31,16 +31,20 @@
         font-size: 18px;
       }
       .project-list{
+        border-bottom: dotted;
+        padding: 50px 0;
         &__title{
           font-size: 26px;
-        text-decoration: underline dotted;
+        text-decoration: underline dashed;
         margin: 0 0 10px;
         }
         .positive{
           a{
             color: #FFAF00FF;
           }
-
+        }
+        &:last-child{
+          border-bottom: none;
         }
       }
     }

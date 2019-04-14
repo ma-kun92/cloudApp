@@ -1,21 +1,28 @@
 .project-edit{
   background-image: image-url('project.jpg');
   background-size: cover;
-  height: 100%;
+  // height: 100%;
   .ui.center.aligned.text.container{
     height: 100%;
     background-color: #FEFEFE99;
   }
   &-main{
-    padding: 140px;
+    padding: 110px;
     button.ui.compact.labeled.icon.button.olive{
       margin-top: 20px;
     }
     #project_video{
       border-radius: 5px;
     }
+    #project_content{
+      font-size: 18px;
+      padding: 5px;
+      padding-right: 50px;
+      border-radius: 8px;
+      border: 1px solid rgba(34,36,38,.15);
+    }
     &__title{
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
       span{
         background: linear-gradient(transparent 70%, #ff99ab 70%);
         font-size: 34px;
@@ -25,7 +32,7 @@
 }
 #img_field {
   width: 300px;
-  height: 220px;
+  height: 240px;
   margin: 10px auto;
   padding: 5px 8px;
   border: solid 1px #EDBC6C;
@@ -38,6 +45,9 @@
   background-size: contain;
   background-color: #fff;
   box-sizing: border-box;
+  img{
+    width: 100%;
+  }
   &:hover{
     background-color: #EDBC6C;
   transition: 0.3s ease-out;

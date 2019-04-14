@@ -14,7 +14,7 @@
             .title
               =link_to project.title, group_project_path(project.group.id, project.id)
             .image
-              %img{:src => "https://semantic-ui.com/images/avatar2/large/kristy.png"}/
+              %img{src:  project.video_url}/
             .content
               .header
                 = project.user.name
