@@ -22,7 +22,7 @@
             アピール文
           %p
             = @project.content
-        -if current_user.payjp_id
+        -if current_user.payjp_id.present?
           = link_to new_group_project_payment_path(params[:group_id], params[:id]) do
             .ui.teal.labeled.icon.button
               %i.smile.outline.icon
@@ -55,7 +55,15 @@
                   %i.paint.brush.icon
                   削除
         .select-option
-          = link_to 'Edit', edit_group_project_path(params[:group_id],@project)
-          %span
-            \/
-          = link_to 'Back', group_path(params[:group_id], @project)
+          = link_to  edit_group_project_path(params[:group_id],@project),id: "edit_project" do
+            .ui.circular.google.plus.icon.button
+              %i.edit.icon
+              プロジェクト編集
+          = link_to group_path(params[:group_id], @project), id: 'back_button' do
+            .ui.circular.google.plus.icon.button
+              %i.edit.inline.icon
+              戻る
+
+
+
+

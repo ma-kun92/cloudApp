@@ -25,7 +25,6 @@ class CardsController < ApplicationController
     payjp_id = current_user.payjp_id
     Payjp.api_key = 'sk_test_dc189ea51b0a5fd7341509b9'
     customer = Payjp::Customer.retrieve(payjp_id)
-    binding.pry
     card = customer.cards.retrieve(customer.cards.data[0].id)
     if card.delete
       redirect_to root_path

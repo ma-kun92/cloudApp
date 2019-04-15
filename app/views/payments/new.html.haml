@@ -1,10 +1,18 @@
 .payment-new
-  .payment-new__form
-    .pay-form
-      .pay-form__project-name
-        =@project.title
-      .pay-form__user-name
-        =current_user.name
-      =form_for @payment,url: group_project_payments_path do |f|
-        =f.text_field :amount, placeholder: "50~ 記入してください"
-        =submit_tag '入金する'
+  .ui.center.aligned.container
+    .payment-new__form
+      .pay-form
+        .pay-form__project-name
+          %span
+            = @project.title
+        .pay-form__user-name
+          = "プロジェクトオーナー：#{@project.user.name}"
+        = form_for @payment,url: group_project_payments_path do |f|
+          %h2 支援する金額
+          .ui.big.icon.input
+            =f.text_field :amount, placeholder: "数字のみで入力"
+            %i.money.icon
+          %br/
+          %button.ui.compact.labeled.icon.button.olive
+            %i.money.icon
+            入金する

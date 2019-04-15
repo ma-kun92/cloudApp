@@ -1,14 +1,38 @@
 
 .payment-new{
-  padding:150px 200px;
-
+  height: 100%;
+  width: 100%;
+  background: image-url("card.jpg");
+  background-size: cover;
+  .ui.center.aligned.container{
+    padding-top: 140px;
+    height: 100%;
+    background-color: #FEFEFE80;
+  }
   &__form{
-    .pay_form{
+    .pay-form{
       &__project-name{
-
+        margin: 30px 0;
+        span{
+          font-weight: 600;
+          background: linear-gradient(transparent 70%, #ff99ab 70%);
+          font-size: 34px;
+        }
       }
       &__user-name{
-
+        margin: 20px 0;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+      form{
+        input[type="text"]{
+        }
+      }
+      button{
+        margin-top: 40px;
+        width: 200px;
+        height: 50px;
       }
     }
   }
