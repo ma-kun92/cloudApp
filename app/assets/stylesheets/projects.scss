@@ -46,6 +46,13 @@
           font-size: 18px;
         }
       }
+      .ui.teal.labeled.icon.button{
+        font-size: 20px;
+        line-height: 50px;
+        vertical-align: middle;
+        height: 80px;
+        width: 300px;
+      }
       .content{
         width: 100%;
       }
@@ -99,9 +106,9 @@
           top: 130px;
           left: 12%;
           .ui.circular.google.plus.icon.button{
-            height: 150px;
-            width: 170px;
-            line-height: 130px;
+            height: 100px;
+            width: 120px;
+            line-height: 80px;
             vertical-align: middle;
             border-radius: 50%;
             -webkit-border-radius: 50%;
