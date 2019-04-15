@@ -11,7 +11,6 @@
   }
   .reset-opacity{
     .main{
-
       .group{
         margin-bottom: 20px;
         &__title{
@@ -26,21 +25,62 @@
       h4{
         font-size: 24px;
       }
-      a{
-        display: contents;
+      #edit_group{
+        position: fixed;
+        top: 130px;
+        left: 130px;
+        display: block;
         font-size: 18px;
+        &:hover{
+          background-color: #FEFEFE00;
+        }
+        .ui.circular.google.plus.icon.button{
+          height: 150px;
+          width: 170px;
+          line-height: 130px;
+          vertical-align: middle;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          background-color: gray;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+      }
+      #make_project{
+        position: fixed;
+        top: 130px;
+        right: 130px;
+        display: block;
+        font-size: 18px;
+        &:hover{
+          background-color: #FEFEFE00;
+        }
+        .ui.circular.google.plus.icon.button{
+          height: 150px;
+          width: 170px;
+          line-height: 130px;
+          vertical-align: middle;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+        }
       }
       .project-list{
+        width: 70%;
+        margin: 0 auto;
         border-bottom: dotted;
         padding: 50px 0;
         &__title{
           font-size: 26px;
-        text-decoration: underline dashed;
-        margin: 0 0 10px;
+          text-decoration: underline dashed;
+          margin: 0 0 10px;
         }
-        .positive{
-          a{
-            color: #FFAF00FF;
+        a{
+          display: contents;
+          .positive{
+
           }
         }
         &:last-child{

@@ -11,15 +11,15 @@
             %i.slideshare.icon
         - if current_user.id == @group.user_ids[0]
           %span
-            = link_to edit_group_path(@group) do
-              .ui.compact.labeled.icon.button
-                %i.edit.icon
+            = link_to edit_group_path(@group), id: 'edit_group' do
+              .ui.circular.google.plus.icon.button
+                %i.edit.outline.icon
                 グループ編集
-        %h4 新規プロジェクトの作成
-        = link_to new_group_project_path(@group) do
-          .ui.compact.labeled.icon.button
+
+        = link_to new_group_project_path(@group),id: 'make_project' do
+          .ui.circular.google.plus.icon.button
             %i.edit.icon
-            登録フォームへ記入する
+            新プロジェクト作成
         %h3 プロジェクト一覧
         - @projects.each do |project|
           .project-list

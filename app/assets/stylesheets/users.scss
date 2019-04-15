@@ -28,13 +28,42 @@
       width: 70%;
       margin: 0 auto;
       .projects{
-        .ui.card{
-          .title{
-            height: 50px;
-            font-size: 20px;
-            line-height: 50px;
-            vertical-align: middle;
-            text-decoration: underline;
+        margin-top: 30px;
+        .ui.equal.width.center.aligned.padded.grid{
+          padding-bottom: 30px;
+          border-bottom: dotted;
+          .ui.card{
+            width: 70%;
+            .title{
+              height: 50px;
+              font-size: 20px;
+              line-height: 50px;
+              vertical-align: middle;
+              text-decoration: underline;
+              margin: 10px 0;
+              a{
+                padding: 5px;
+                border-radius: 5px;
+                &:hover{
+                  background-color: #FC800823;
+                }
+              }
+            }
+            .image{
+            }
+            .content{
+              padding: 20px 0;
+              .meta{
+              }
+              .header{
+              }
+              .description{
+              }
+            }
+            .extra{
+              .members{
+              }
+            }
           }
         }
       }
@@ -48,9 +77,10 @@
         padding-bottom: 20px;
         a{
           padding: 5px;
-          border-radius: 10px;
-          border: solid 1px orange;
-          background: #FC8008CC;
+          border-radius: 5px;
+          span{
+            background: linear-gradient(transparent 70%, #7FFE07FF 90%);
+          }
           &:hover{
             background: #FC8008FF;
             color: black;

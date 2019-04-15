@@ -20,11 +20,14 @@
         %ul
           %li.header-list_left
             %i.magic.icon
-          %li.header-list_left famifun
+          =link_to root_path do
+            %li.header-list_left famifun
           = link_to edit_users_path do
             %li.header-list Edit Me
           = link_to :logout, method: :delete do
             %li.header-list Logout
+            %li.user
+              =current_user.name
       - else
         %ul
           %li.header-list_left

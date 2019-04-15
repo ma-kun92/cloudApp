@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
 
   def new
-    @item = Item.find_by(params[:item_id])
+    @project = Project.find_by(params[:project_id])
     @payment = Payment.new
   end
 
@@ -9,7 +9,7 @@ class PaymentsController < ApplicationController
     Payjp.api_key = 'sk_test_dc189ea51b0a5fd7341509b9'
     if Payjp::Charge.create(amount: params[:payment][:amount], customer:  current_user.payjp_id, currency: 'jpy')
       if Payment.create(create_params)
-        redirect_to group_item_path(params[:group_id], params[:item_id])
+        redirect_to group_project_path(params[:group_id], params[:project_id])
       end
     else
       render :new,notice: '入力に不備があります'
@@ -18,7 +18,7 @@ class PaymentsController < ApplicationController
 
   private
   def create_params
-    params.require(:payment).permit(:amount).merge({user_id: current_user.id, item_id: params[:item_id]})
+    params.require(:payment).permit(:amount).merge({user_id: current_user.id, project_id: params[:project_id]})
   end
 end
 

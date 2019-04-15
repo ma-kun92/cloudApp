@@ -10,6 +10,7 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_to root_path, notice: 'ログイン成功しました'
     else
+      @user = User.new
       flash.now[:alert] = "ログイン失敗です"
       render :new
     end

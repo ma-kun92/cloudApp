@@ -11,6 +11,17 @@
   ul{
     margin: 0;
     padding-left: 10%;
+    .user{
+      color: black !important;
+      list-style: none;
+      padding: 0 10px;
+      font-size: 20px;
+      height: 80px;
+      line-height: 70px;
+      vertical-align: middle;
+      text-align: center;
+      float: right;
+    }
     .header-list{
       list-style: none;
       padding: 0 10px;

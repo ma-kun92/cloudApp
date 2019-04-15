@@ -4,23 +4,34 @@
   background-size: cover;
   height: 100%;
   .ui.center.aligned.container{
-    color: white;
-    padding-top: 150px;
+    height: 100%;
+    background-color: #FEFEFE99;
+    padding: 150px 0 50px;
+  }
+  &__main{
     width:100%;
+    .page-title{
+      span{
+         background: linear-gradient(transparent 70%, #ff99ab 70%);
+          font-size: 34px;
+          font-weight: 600;
+      }
+    }
     h1{
       font-size: 30px;
     }
     form{
-      label{
-        font-size: 24px;
-        font-weight: 600;
-      }
       .field{
         padding:20px;
         line-height: 30px;
         .text{
           font-size: 16px;
           padding: 5px;
+        }
+        label{
+          margin-top: 20px;
+          font-size: 24px;
+          font-weight: 600;
         }
       }
       #user_email{
@@ -31,7 +42,6 @@
       }
       #remember{
         font-size: 20px;
-        color: white;
       }
       .action{
         padding: 20px;
