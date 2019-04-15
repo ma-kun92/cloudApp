@@ -15,7 +15,7 @@
     %script{:src => "https://js.pay.jp/", :type => "text/javascript"}
 
   %body
-  = @string.force_encoding("utf-8")
+    = @string.force_encoding("utf-8")
     #nav
       - if current_user
         %ul
