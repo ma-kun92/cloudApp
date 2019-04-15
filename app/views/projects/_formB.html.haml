@@ -6,7 +6,7 @@
         prohibited this project from being saved:
       %ul
         - project.errors.full_messages.each do |message|
-          %li= message
+          %li= message.force_encoding("utf-8")
   .field
     = form.label :title, "タイトル"
     .ui.big.icon.input
