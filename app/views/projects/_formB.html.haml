@@ -13,7 +13,6 @@
       = form.text_field :title
       %i.home.icon
   .field
-
     = form.label :video, "投稿したい画像・動画"
     #img_field{:onclick => "$('#file').click()"}
       - if project.video.url.present?
