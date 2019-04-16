@@ -4,7 +4,6 @@ class CardsController < ApplicationController
   end
 
   def create
-    binding.pry
     token = params[:token]
       # payjpの機能を使用するときに必要なapi_key
     Payjp.api_key = 'sk_test_dc189ea51b0a5fd7341509b9'
