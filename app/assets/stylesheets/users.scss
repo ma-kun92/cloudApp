@@ -1,6 +1,5 @@
 
 .user-index{
-  // height: 100%;
   width: 100%;
   background-image: image-url('user_index.jpg');
   background-size: cover;
@@ -89,6 +88,24 @@
         &-sub{
           line-height: 30px;
           font-size: 30px;
+        }
+      }
+    }
+    .ui.circular.google.plus.icon.button{
+      position: fixed;
+      top:130px;
+      right: 12%;
+      height: 150px;
+      width: 170px;
+      line-height: 130px;
+      vertical-align: middle;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      a{
+        color: black;
+        &:hover{
+          background-color: #FEFEFE00;
         }
       }
     }

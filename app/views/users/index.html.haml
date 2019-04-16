@@ -13,3 +13,7 @@
       %h3
       %ul.group__lists
         = render partial: 'group', locals: {groups: @groups}
+      .ui.circular.google.plus.icon.button
+        = link_to new_group_path do
+          %i.edit.outline.icon
+          新グループ作成
