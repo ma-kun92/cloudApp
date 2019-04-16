@@ -4,12 +4,6 @@
       .user-name
         %span
           参加中のグループ一覧
-      .make-group__form
-        =link_to new_group_path do
-          %button.ui.compact.labeled.icon.button.olive
-            %i.sitemap.icon
-            新規グループ作成
-      %br/
       %h3
       %ul.group__lists
         = render partial: 'group', locals: {groups: @groups}
