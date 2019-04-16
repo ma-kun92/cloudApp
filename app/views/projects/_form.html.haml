@@ -8,13 +8,14 @@
         - project.errors.full_messages.each do |message|
           %li= message
   .field
-    = form.label :title, "タイトル"
+    %span.label
+      = form.label :title, "タイトル"
     .ui.big.icon.input
       = form.text_field :title
       %i.home.icon
   .field
-
-    = form.label :video, "投稿したい画像・動画"
+    %span.label
+      = form.label :video, "投稿したい画像"
     #img_field{:onclick => "$('#file').click()"}
       - if project.video.url.present?
         変更可能
@@ -24,7 +25,8 @@
     = form.file_field :video, class: "image", style: "display:none;", id: "file",:accept => 'image/*, video/*'
 
   .field
-    = form.label :content, "アピール文"
+    %span.label
+      = form.label :content, "アピール文"
     .ui.big.icon.input
       = form.text_area :content, size: "40x10"
       %i.bullhorn.icon

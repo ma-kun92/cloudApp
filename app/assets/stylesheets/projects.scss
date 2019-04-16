@@ -10,6 +10,12 @@
     height: 100%;
   }
   &-show{
+    #notice{
+      span{
+        font-size: 30px;
+        background-color: #FC666518;
+      }
+    }
     &-main{
       width: 100%;
       a{

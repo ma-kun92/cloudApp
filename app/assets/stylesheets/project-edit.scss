@@ -11,18 +11,28 @@
     button.ui.compact.labeled.icon.button.olive{
       margin-top: 20px;
     }
-    #project_video{
-      border-radius: 5px;
-    }
-    #project_content{
-      font-size: 18px;
-      padding: 5px;
-      padding-right: 50px;
-      border-radius: 8px;
-      border: 1px solid rgba(34,36,38,.15);
+    #new_project{
+      .field{
+        margin: 15px 0;
+        .label{
+          font-size: 20px;
+          font-weight: 600;
+          border-bottom: dashed 2px;
+        }
+        #project_video{
+          border-radius: 5px;
+        }
+        #project_content{
+          font-size: 18px;
+          padding: 5px;
+          padding-right: 50px;
+          border-radius: 8px;
+          border: 1px solid rgba(34,36,38,.15);
+        }
+      }
     }
     &__title{
-      // margin-bottom: 20px;
+      margin-bottom: 20px;
       span{
         background: linear-gradient(transparent 70%, #ff99ab 70%);
         font-size: 34px;
