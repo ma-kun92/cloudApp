@@ -1,0 +1,7 @@
+.group-show.check
+  .ui.center.aligned.container
+    .group-show__main
+      =form_tag group_url(params[:id]), method: :get do
+        %label "鍵"
+        =text_field_tag :key
+        =submit_tag

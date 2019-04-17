@@ -15,7 +15,7 @@
               %i.edit.outline.icon
               グループ編集
         %span
-          = link_to group_path(@group), id: 'delete_group' do
+          = link_to group_path(@group),method: :delete, id: 'delete_group' do
             .ui.circular.google.plus.icon.button
               %i.edit.outline.icon
               グループ削除

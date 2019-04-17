@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   resources :user_sessions
   resources :groups do
+    member do
+      post 'check'
+    end
     resources :projects do
       resources :payments
       collection do

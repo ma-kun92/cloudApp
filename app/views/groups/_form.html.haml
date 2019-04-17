@@ -17,12 +17,12 @@
       = form.label :key, '入場キー'
       %span
         設定する
-      = radio_button_tag :check, "はい"
+      = radio_button_tag :check, "yes",'はい', id: "yes"
       %span
         しない
-      = radio_button_tag :check, "いいえ",checked: true
+      = radio_button_tag :check, 'no', "いいえ", id: "no",checked: true
     %br
-    .ui.big.icon.input
+    #add_form.ui.big.icon.input{style: 'display: none'}
       = form.text_field :key, placeholder: '必要な人だけ入力してください',id: "room_key"
       %i.key.icon
   %button.ui.compact.labeled.icon.button.olive
