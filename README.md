@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## アプリケーション概要
+個人アプリケーションを紹介します。クラウドファンディングのようなサWebアプリを作成しました。身内(家族もしくは親族間)でお互いの近況を理解し応援できる場があればいいなと思っていました。今どんなことをしているのだろう、何かに挑戦しているとしたら身内だからこそ助けてあげれることがあるんじゃないか、じゃぁそれぞれ違う環境で生活している人に対してどう言った支援の形が取れるか、と考えた時にクラウドファンディングが１つの答えになるかも、と作り始めました。
+  身内間だけで情報を共有できるようにグループに任意で鍵付できるようになっており、クレジットカードを通して相手にお金を支援できるようになっています。
