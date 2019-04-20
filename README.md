@@ -11,6 +11,6 @@ https://gyazo.com/37f144f5bc1407831086bdcfc0a1bdc1
 https://gyazo.com/17e630a074ef1437976beb0d4c37aa18
 (グループ一覧画面)
 https://gyazo.com/a2b95c7e50ca3fa609ad7ffae699f606
-（グループ内のプロジェクト一覧画面とプロジェクト編集画面）
+（グループ内のプロジェクト一覧画面と編集画面）
 https://gyazo.com/c9103cd0560789878e74960ececbef02
 （応援したいプロジェクトに対するPayjpを通しての支払い機能）
